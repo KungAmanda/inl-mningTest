@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,24 @@ namespace inlämningTest
 {
     public partial class Form1 : Form
     {
+        // gör så att den kan kontakta databasen 
+        MySqlConnection conn;
+
         public Form1()
         {
             InitializeComponent();
+
+            //Bygg upp MySQLCOnneection obejkt
+            string server = "localhost";
+            string database = "databoos";
+            string user = "root";
+            string password = "Simon123";
+
+            string connString = $"SERVER={server};DATABASE={database};UID={user};PASSWORD={password};";
+
+            conn = new MySqlConnection(connString);
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -23,6 +39,11 @@ namespace inlämningTest
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
