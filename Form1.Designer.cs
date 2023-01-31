@@ -43,11 +43,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ratingBox4 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,9 +54,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 28);
+            this.label1.Size = new System.Drawing.Size(150, 28);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Lägg till film";
+            this.label1.Text = "Lägg till  film";
             // 
             // label2
             // 
@@ -138,15 +136,15 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 230);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(476, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(533, 181);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(300, 425);
+            this.button2.Location = new System.Drawing.Point(338, 182);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 24);
+            this.button2.Size = new System.Drawing.Size(79, 28);
             this.button2.TabIndex = 11;
             this.button2.Text = "Ändra";
             this.button2.UseVisualStyleBackColor = true;
@@ -154,12 +152,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(385, 426);
+            this.button3.Location = new System.Drawing.Point(248, 182);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 24);
+            this.button3.Size = new System.Drawing.Size(84, 28);
             this.button3.TabIndex = 12;
             this.button3.Text = "Ta bort";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label6
             // 
@@ -181,21 +180,13 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(348, 182);
+            this.button4.Location = new System.Drawing.Point(405, 425);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 28);
+            this.button4.Size = new System.Drawing.Size(136, 24);
             this.button4.TabIndex = 16;
             this.button4.Text = "Hämta inlagda filmer";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(8, 464);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(476, 171);
-            this.dataGridView2.TabIndex = 17;
             // 
             // ratingBox4
             // 
@@ -222,7 +213,6 @@
             this.ClientSize = new System.Drawing.Size(990, 647);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.ratingBox4);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label6);
@@ -239,10 +229,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Fake";
+            this.Text = "FakeIMDb";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,7 +254,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TextBox ratingBox4;
         private System.Windows.Forms.Button button5;
     }
