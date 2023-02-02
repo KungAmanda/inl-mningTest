@@ -37,7 +37,7 @@ namespace inlämningTest
         private void button4_Click(object sender, EventArgs e)
         {
             // Gör en ny koppling 
-            string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123;";
+            string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123!;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM film", connection);
 
@@ -84,7 +84,7 @@ namespace inlämningTest
             string ratingBox5Value = ratingBox4.Text;
 
             // Gör en ny koppling
-            string connectionString = "Server=localhost;Database=databoos;Uid=root;Pwd=Simon123;";
+            string connectionString = "Server=localhost;Database=databoos;Uid=root;Pwd=Simon123!;";
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             //Kollar så de står nått i textboxarna samt sparar värdet 
@@ -128,7 +128,7 @@ namespace inlämningTest
         {
 
             // Gör en ny koppling 
-            string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123;";
+            string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123!;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand cmd;
 
@@ -176,7 +176,7 @@ namespace inlämningTest
         private void button2_Click(object sender, EventArgs e)
         {
             // Skapa en ny koppling
-            string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123;";
+            string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123!;";
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             try
@@ -200,8 +200,8 @@ namespace inlämningTest
                         
                         // Lägg till parametrar för  skydd mot sql-injection
                          cmd.Parameters.AddWithValue("@Film", row.Cells[1].Value);
-                         cmd.Parameters.AddWithValue("@Genre", row.Cells[2].Value);
-                         cmd.Parameters.AddWithValue("@Regissör", row.Cells[3].Value);
+                         cmd.Parameters.AddWithValue("@Genre", row.Cells[3].Value);
+                         cmd.Parameters.AddWithValue("@Regissör", row.Cells[2].Value);
                          cmd.Parameters.AddWithValue("@Rating", row.Cells[4].Value);
                          cmd.Parameters.AddWithValue("@Film_id", row.Cells[0].Value); 
 
@@ -239,7 +239,7 @@ namespace inlämningTest
                 // Om ja, tar detta bort den raden
                 if (result == DialogResult.Yes)
                 {
-                    string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123;";
+                    string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123!;";
                     MySqlConnection connection = new MySqlConnection(connectionString);
                     MySqlCommand cmd = new MySqlCommand("DELETE FROM film WHERE Film_id = @Film_id", connection);
                     cmd.Parameters.AddWithValue("@Film_id", Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value));
@@ -269,7 +269,7 @@ namespace inlämningTest
         private void RefreshDataGridView()
         {
             
-            string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123;";
+            string connectionString = "Server=localhost;Port=3306;Database=databoos;Uid=root;Pwd=Simon123!;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM film", connection);
 
